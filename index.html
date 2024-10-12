@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Of Form</title>
+    <style>
+        /* CSS for overall layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+      /* Navigation bar styles */
+        .nav-container {
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            background-color: rgb(0, 191, 255);
+            width: 100%; /* Full width */
+            height: 70px; /* Fixed height */
+            position: fixed; /* Fix position at the top */
+            top: 0;
+            right: 15px;
+            left: 0px; /* Align to the left */
+            border-radius: 0 0 15px 15px;
+            z-index: 500;
+            padding: 5px 20px; /* Add horizontal padding */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        
+        .nav-text {
+            display: flex; /* Use flex for horizontal alignment */
+            justify-content: center; /* Center links */
+            width: 100%; /* Take full width */
+            gap: 150px;
+        }
+
+        .nav-text a {
+            text-decoration: none;
+            color: black;
+            margin: 0 15px; /* Horizontal spacing between links */
+            font-size: 16px; /* Adjusted font size for better responsiveness */
+            font-weight: bold;
+            
+        }
+        .nav-text a:hover {
+            color: white; 
+        }
+        .sidebar-image {
+            width: 90px; /* Adjusted size for better responsiveness */
+            height: 60px;
+            margin-right: 20px; /* Adjust spacing as needed */
+            margin-left: 20px;
+            border-radius: 10%;
+            object-fit: cover; /* Ensure the image keeps its aspect ratio */
+        }
+.form {
+            text-align: center;
+            margin-top: 30px;
+            width: 80%;
+            margin-left: 150px;
+            font-family: cursive;
+            font-weight: bold;
+
+        }
+.link{
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+a {
+    color: rgb(246, 132, 151);
+
+    }
+    a:hover {
+    color: blue;
+    }
+    h1 {
+        font-size: 30px;
+                font-weight: bold;
+                margin-top: 80px;
+                text-align: center;
+                text-shadow: 0px 5px 15px rgb(74, 73, 73);
+    }
+    h6 {
+        text-align: center;
+        color: rgb(167, 164, 164);
+    }
+    textarea {
+  width: 100%; /* Set the width to 100% of the container */
+  max-width: 800px; /* Optional: limit the max width if needed */
+  height: 150px; /* Increase height for a larger comment box */
+  padding: 10px; /* Add padding for better user experience */
+  border-radius: 8px; /* Round the corners */
+  border: 1px solid #ccc; /* Add a subtle border */
+  font-size: 16px; /* Adjust font size for better readability */
+  resize: vertical; /* Allow vertical resizing only */
+  box-sizing: border-box; /* Ensure padding is included in the element's width/height */
+}
+
+/* Placeholder styling */
+textarea::placeholder {
+  color: rgb(156, 155, 155); /* Set the placeholder text color */
+  font-style: italic; /* Optional: add italic styling to placeholder text */
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+            .nav-text a {
+                font-size: 14px; /* Smaller font size for mobile */
+                margin: 0 10px; /* Reduced spacing for mobile */
+            }
+            .sidebar-image {
+                width: 90px; /* Smaller sidebar image for mobile */
+                height: 60px; /* Smaller sidebar image for mobile */
+            }
+            .form {
+        width: 95%; /* Make the form take more width on mobile */
+        margin-top: 80px; /* Adjust top margin to fit better */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    textarea {
+        font-size: 14px; /* Adjust font size for readability */
+        height: 120px;
+         /* Adjust height for smaller screens */
+    }
+
+    button.submit-btn {
+        width: 100%; /* Make the button full width on mobile */
+        padding: 10px;
+    }
+        }
+        @media (max-width: 480px) {
+            .nav-container {
+                flex-direction: column; /* Stack nav items vertically */
+                height: auto; /* Allow height to adjust */
+            }
+
+            .nav-text {
+                flex-direction: row; /* Stack nav items vertically */
+                align-items: center; /* Center items */
+                gap: 20px;
+            }
+
+            .nav-text a {
+                margin: 5px 0; /* Vertical spacing for mobile */
+            }
+            h1 {
+                margin-top: 120px;
+            }
+            
+            .form {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto; /* Ensure the form is centered */
+    }
+
+    textarea {
+        height: 100px;
+        font-size: 12px;
+    }
+
+    button.submit-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+            .link {
+                margin-bottom: 20px; /* Adjust margin for link */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav-container">
+        <img src="pana1.png" alt="Your Image" class="sidebar-image">
+        <div class="nav-text">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+    </div>
+</div>
+
+
+    <!-- Main Content -->
+    <h1><u><i>Design A Form As you Like!</i></u></h1>
+<div class="form">
+    <fieldset>
+    <legend>Your Details:</legend>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    </div>
+    </fieldset>
+
+<fieldset>
+    <legend>Your Review:</legend>
+    <div class="form-group">
+        <label for="source">How did you hear about us?</label>
+        <select id="source" name="source">
+            <option value="google">Google</option>
+            <option value="friend">Friend</option>
+            <option value="advertisement">Advertisement</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label>Would you visit again?</label>
+        <input type="radio" id="yes" name="visit-again" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="visit-again" value="no">
+        <label for="no">No</label>
+        <input type="radio" id="maybe" name="visit-again" value="maybe">
+        <label for="maybe">Maybe</label>
+    </div>
+    
+    <div class="form-group">
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" placeholder="Write your comments here..."></textarea>
+    </div>
+
+    
+    <div class="checkbox-group">
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <label for="subscribe">Sign me up for email updates</label>
+    </div>
+    
+    <div>
+        <button type="submit" class="submit-btn">Submit review</button>
+    </div>
+</fieldset>
+</div>
+    <div class="link">
+        <a href="https://github.com/Ameen-Alam/PIAIC-HTML-CSS-Assignments/?tab=readme-ov-file">GitHub/GIAIC-HTML-CSS-Assignments</a>
+    </div>
+    <h6><i>Author: Azmat Ali</i></h6>
+</body>
+</html>
